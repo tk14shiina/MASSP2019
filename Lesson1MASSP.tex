@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+
+\usepackage[vietnamese]{babel}
+\title{LESSON 1 MASSP AI}
+\author{Vũ Lê Mai}
+\date{July 2019}
+\usepackage{natbib}
+\usepackage{graphicx}
+\begin{document}
+    \maketitle
+\section{Khái quát}
+    TEFPA\\
+    T: Task\\
+    E: Experience  E = ({$X_{i}$,$Y_{i}$})\\
+    F: Function $Z_{g}$, $Z_{h}$\\
+    P: Performance\\
+    A: Algorithm\\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1]{kq}
+\label{fig:kq}
+\end{figure}
+\section{Principal Component Analysis (PCA)}
+    PCA làm giảm chiều giữ liệu\\
+    $P(X_{1}, X_{2})$ (độ tương tác) \\
+    = ||$X_{1}$ - $X_{2}$ || \\
+    $X_{1} \approx X_{0} + a_{1_{1}}X_{1} + a_{1_{2}}X_{2} + ... + a_{1_{k}}X_{k}$\\
+    $X_{2} \approx X_{0} + a_{2_{1}}X_{1} + a_{2_{2}}X_{2} + ... + a_{2_{k}}X_{k} $
+
+    a: coordinates
+
+    X: basis function
+
+    $X_{0}$ (mean): Hình trung bình\\
+    $P(X_{1}, X_{2})$ = ||$\Delta$ x||
+
+    Khoảng cách 2 vector: $\sqrt{\sum \left ( x_{1_{ij}} - x_{2_{ij}}\right )^{2}}$
+
+    Góc 2 vector $\sqrt{\sum x_{1_{ij}} x_{2_{ij}}} $\\
+    Chọn $X_{1}$ thỏa mãn $X \approx \tilde{X_{1}}$
+    <=> min $\sum_{t=1}^{D}$ = ||$X^{T}$ - $X^{T}_{1}$ ||
+
+    dataset D
+
+    hình T
+
+\end{document}
