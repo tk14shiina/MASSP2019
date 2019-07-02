@@ -1,0 +1,80 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[vietnamese]{babel}
+
+\title{LECTURE SUMARY}
+\author{Vũ Lê Mai}
+\date{July 2019}
+
+\begin{document}
+
+\maketitle
+\section{Unified framework}
+    TEFPA
+
+    Task: input và output
+
+    Experience:  D = ($X_i,Y_i$)
+
+    Function: $Z_g$, $Z_h$
+
+    Performance measurement: P($X_i, Y_i, g_1,g_2$)
+
+    Algorithm\\
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.5]{pic1.png}
+\\Unified framework\\
+\end{figure}\\
+    X: đầu vào\\
+    Y: đầu ra\\
+    $g_1$, $g_2$, $h_1$, $h_2$: hàm chiết suất đặc trưng\\
+    $Z_x$, $Z_y$: vector tọa độ, được nhúng qua embaddings để đưa về dạng có thể so sánh được với nhau
+\section{PCA}
+    PCA làm giảm chiều giữ liệu\\
+    $P(X_{1}, X_{2})$ (độ tương tác) \\
+    = ||$X_{1}$ - $X_{2}$ || \\
+    $X_{1} \approx X_{0} + a_{1_{1}}X_{1} + a_{1_{2}}X_{2} + ... + a_{1_{k}}X_{k}$\\
+    $X_{2} \approx X_{0} + a_{2_{1}}X_{1} + a_{2_{2}}X_{2} + ... + a_{2_{k}}X_{k} $
+
+    a: coordinates
+
+    X: basis function
+
+    $X_{0}$: means\\
+    $P(X_{1}, X_{2})$ = ||$\Delta$ x||
+
+    Khoảng cách 2 vector: $\sqrt{\sum \left ( x_{1_{ij}} - x_{2_{ij}}\right )^{2}}$
+
+    Góc 2 vector $\sqrt{\sum x_{1_{ij}} x_{2_{ij}}} $\\
+    Chọn $X_{1}$ thỏa mãn $X \approx \tilde{X_{1}}$
+    <=> min $\sum_{t=1}^{D}$ = ||$X^{T}$ - $X^{T}_{1}$ ||\\
+    Thực hiện từ X đến $Z_X$
+\section{Linear Regression}
+    Công thức:
+    $$\mathbf{w} = \mathbf{A}^{\dagger}\mathbf{b} = (\mathbf{\bar{X}}^T\mathbf{\bar{X}})^{\dagger} \mathbf{\bar{X}}^T\mathbf{y}$$\\
+    Thực hiện từ $Z_g$ đến $Z_Y$
+\section{Logistic Regression}
+    Sigmoid:\\
+    $$\sigma = \frac{1}{1+e^{-s}}$$
+    Cross Entropy:
+    $$-\sum_{i=1} ^{d} P_y_i logP_y_i $$
+    Thực hiện từ $Z_g$ đến $Z_Y$. Với $Z_Y$ là xác suất nên được đưa qua $\sigma$ để trở về dạng (0,1)
+\section{Softmax Regression}
+    Công thức: \
+$$P_i = softmax x_i = \frac{\sigma (y_i)}{\sum_{j=1}^{d}\sigma(y_i)}$$\\
+    Thực hiện từ $Z_g$ đến $Z_Y$. Với $Z_Y$ là vector xác suất.\\
+\begin{figure}[h!]
+\centering\includegraphics[scale=0.8]{pic2.png}
+\\Unfied framework\\
+\end{figure}
+
+\section{Multi-layer Perception}
+
+    Đối với Linearly non-separable\\
+\begin{figure}[h!]
+\centering\includegraphics[scale=1.2]{pic3.png}
+\\Unfied framework\\
+\end{figure}
+
+\end{document}
